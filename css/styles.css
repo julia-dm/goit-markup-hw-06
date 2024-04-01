@@ -745,7 +745,7 @@ pointer-events: auto;
     background: #fcfcfc;
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px 24px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -874,45 +874,47 @@ color: rgba(46, 47, 66, 0.4);
 .modal-filed-textarea{
 margin-bottom: 16px;
 }
-.modal-filed-check{
+.modal-filed-check{   
     margin-bottom: 24px;
+    display: flex;
+    align-content: center;
    border-radius: 4px;
-width: 360px;
-height: 16px;
+/* width: 360px;
+height: 16px; */
+width: 256px;
+height: 31px;
 }
-.ttt{
-     margin-top: 5px;
-  margin-left: 15px;
-}
+
 .check-text{
-/* display: flex; */
-/* align-items: center; */
-font-size: 12px;
+    
+display: flex;
+align-items: center;
+
+font-size:12px;
 line-height: 1.17;
 letter-spacing: 0.04em;
 color: #8e8f99;
 }
-
-.check-label-text{
+.checkbox-label-text{
+ display: inline;
+width: 100%;
 
 }
 
-
-
 .check-link{
-display: flex;
-align-items: center;
-    line-height: 1.33;
+    display: inline-flex;
+    /* width: 81px; */
+line-height: 1.33;
 text-decoration: underline;
 text-decoration-skip-ink: none;
 color: #4d5ae5;
 }
 
 .check-text-holder{
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     margin-right: 8px;
     width: 16px;
     height: 16px;
@@ -923,7 +925,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
 }
 
 
-.modal-check:checked + .check-text span {
+.modal-check:checked + .check-text > .check-text-holder{
 background-color: #404bbf;
 border: none;
 fill: #f4f4fd;
@@ -1085,6 +1087,13 @@ display: flex;
 width: 408px;
 min-height: 584px;
 }
+.modal-filed-check{   
+
+width: 360px;
+height: 16px;
+
+}
+
 .check-text{
   display: flex;
 font-size: 12px;
